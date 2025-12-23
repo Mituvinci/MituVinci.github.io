@@ -293,34 +293,114 @@ a:hover {
 }
 
 /* ===========================
-   Certifications
+   AWS Certification Highlight
    =========================== */
-.certification {
-  padding: 1.5rem;
-  background-color: var(--bg-light);
-  border-radius: 8px;
-  border-left: 5px solid var(--primary-color);
+.certification-highlight {
+  background: linear-gradient(135deg, #FF9900 0%, #FF9900 100%);
+  background-color: #232F3E;
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
 }
 
-.cert-title {
-  font-size: 1.35rem;
+.certification-highlight::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.certification-highlight .section-title {
+  color: white;
+  border-bottom-color: #FF9900;
+  font-size: 1.75rem;
+}
+
+.cert-highlight-box {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.cert-badge {
+  flex-shrink: 0;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.cert-info {
+  flex: 1;
+}
+
+.cert-highlight-text {
+  font-size: 1.1rem;
+  color: var(--text-primary);
   margin-bottom: 1rem;
-  color: var(--secondary-color);
 }
 
-.cert-details,
-.cert-validation {
-  margin-bottom: 0.75rem;
+.cert-validation-highlight {
+  font-size: 1rem;
   color: var(--text-secondary);
+  margin-bottom: 1.5rem;
 }
 
-.cert-link {
-  margin-top: 1rem;
-}
-
-.cert-link a {
+.cert-validation-highlight code {
+  background-color: var(--bg-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  color: #232F3E;
   font-weight: 600;
-  color: var(--primary-color);
+}
+
+.cert-verify-btn {
+  margin-top: 1.5rem;
+}
+
+.btn-verify {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #FF9900 0%, #FF7700 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4);
+}
+
+.btn-verify:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(255, 153, 0, 0.6);
+  background: linear-gradient(135deg, #FF7700 0%, #FF9900 100%);
+  color: white;
+}
+
+.btn-verify svg {
+  width: 24px;
+  height: 24px;
 }
 
 /* ===========================
@@ -531,6 +611,18 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
+  .cert-highlight-box {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .btn-verify {
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+  }
+
   .footer-links {
     gap: 1rem;
   }
@@ -555,6 +647,27 @@ a:hover {
 
   .section {
     padding: 1rem;
+  }
+
+  .certification-highlight .section-title {
+    font-size: 1.25rem;
+  }
+
+  .cert-highlight-box {
+    padding: 1rem;
+  }
+
+  .btn-verify {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .cert-validation-highlight code {
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 0.5rem;
   }
 }
 
