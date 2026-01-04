@@ -404,6 +404,51 @@ a:hover {
 }
 
 /* ===========================
+   Additional Certifications
+   =========================== */
+.certification-item {
+  padding: 1.5rem;
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  border-left: 5px solid var(--accent-color);
+}
+
+.cert-name {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--secondary-color);
+}
+
+.cert-details {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.cert-verify-link {
+  margin-top: 1rem;
+}
+
+.cert-verify-link a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cert-verify-link a:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  color: white;
+}
+
+/* ===========================
    Experience
    =========================== */
 .experience {
