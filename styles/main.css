@@ -493,6 +493,66 @@ a:hover {
 }
 
 /* ===========================
+   Projects
+   =========================== */
+.project-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--bg-light);
+  border-radius: 8px;
+  border-left: 5px solid var(--accent-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.project-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: var(--secondary-color);
+}
+
+.project-meta {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+
+.project-desc {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.project-link a {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.project-link a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Cert image
+   =========================== */
+.cert-image-container {
+  margin-top: 1rem;
+}
+
+.cert-image {
+  max-width: 480px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ===========================
    Skills
    =========================== */
 .skill-category {
